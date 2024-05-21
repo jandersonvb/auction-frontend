@@ -25,6 +25,8 @@ const useSignUp = () => {
       if (!response.ok) {
         if (response.status === 401) {
           setError('Nome, e-mail ou senha inválidos.');
+
+
         } else {
           setError(UNKNOWN_ERROR_MESSAGE);
         }
@@ -32,6 +34,9 @@ const useSignUp = () => {
       }
       setError("");
       // Handle successful sign up (e.g., store token, redirect, etc.)
+
+      // Redirect to login page
+      window.location.href = '/login';
     } catch (error) {
       setError(UNKNOWN_ERROR_MESSAGE);
     }

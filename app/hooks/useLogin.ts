@@ -31,6 +31,9 @@ const useLogin = () => {
       }
       setError("");
       // Handle successful login (e.g., store token, redirect, etc.)
+
+      // Redirect to book list page
+      window.location.href = '/books';
     } catch (error) {
       setError(UNKNOWN_ERROR_MESSAGE);
     }
